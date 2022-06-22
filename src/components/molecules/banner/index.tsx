@@ -4,7 +4,7 @@ import Text from '../../atoms/text';
 import Image from '../../atoms/images';
 const useStyles = makeStyles({
   root: {
-    width: '512px',
+    width: '800px',
     height: '264px',
     backgroundColor: '#F1F6F4',
     paddingLeft: '45px',
@@ -12,7 +12,11 @@ const useStyles = makeStyles({
     marginTop: '30px',
   },
   
-  parent: { display: 'flex', justifyContent: 'center' },
+  parent: { 
+    display: 'flex',
+    justifyContent: 'center',
+    paddingRight:'30px',
+  },
 
   flexCol: {
     display: 'flex',

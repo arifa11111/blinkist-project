@@ -81,15 +81,16 @@ it('grid should be navigated to bookdetails on click', () => {
 it('should navigate to MyLIbrary page', () => {
   renderFunction();
   const entrepreneurship = screen.getByRole('button', {
-    name: /currently reading/i,
+    name: 'Currently Reading',
   });
   fireEvent.click(entrepreneurship);
 });
 
 it('should navigate to  page', () => {
   renderFunction();
-  const entrepreneurship = screen.getByRole('button', {
-    name: /finished/i,
-  });
-  fireEvent.click(entrepreneurship);
+  const entrepreneur= screen.getAllByRole('button', {
+    name: 'Finished'
+  })[0] as HTMLAnchorElement;
+  
+  fireEvent.click(entrepreneur);
 });

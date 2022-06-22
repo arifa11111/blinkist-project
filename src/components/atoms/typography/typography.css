@@ -1,5 +1,5 @@
 .h1 {
-  font-family: Cera Pro, sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -9,7 +9,7 @@
 }
 
 .subtitle2 {
-  font-family: Cera Pro, sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -20,18 +20,18 @@
   display: block;
 }
 .subtitle1 {
-  font-family: Cera Pro, sans-serif;
+  font-family: sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: normal;
   font-size: 17px;
   line-height: 23px;
   width: 250px;
-  color: #03314b;
+  color: #6d787e;
   display: block;
   text-transform: capitalize;
 }
 .subtitle3 {
-  font-family: Cera Pro, sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -41,9 +41,9 @@
   text-transform: capitalize;
 }
 .subtitle3Blue {
-  font-family: Cera Pro, sans-serif;
+  font-family: sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   color: #116be9;
@@ -51,39 +51,41 @@
   display: block;
   text-transform: capitalize;
 }
-.body1 {
-  font-family: Cera Pro, sans-serif;
+.body3 {
+  font-family:  sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 800;
   font-size: 16px;
   line-height: 20px;
-  color: #6d787e;
+  color: #1d4f69;
   display: block;
   margin-top: 14px;
   text-transform: capitalize;
 }
+
 .body2 {
-  font-family: Cera Pro, sans-serif;
+  font-family:  sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #353430;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: #1d4f69;
   display: block;
+  margin-top: 14px;
   text-transform: capitalize;
 }
-.body3 {
-  font-family: Cera Pro, sans-serif;
+.body1 {
+  font-family:  sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #353430;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #6d787e;
   display: block;
-  text-transform: capitalize;
+  text-transform: none;
 }
 .caption1 {
-  font-family: Cera Pro, sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -92,7 +94,7 @@
   display: block;
 }
 .caption2 {
-  font-family: Cera Pro, sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -101,7 +103,7 @@
   display: block;
 }
 .caption3 {
-  font-family: Cera Pro, sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -115,7 +117,7 @@
 }
 
 .body1black {
-  font-family: Cera Pro, sans-serif;
+  font-family:  sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -127,7 +129,7 @@
 }
 
 .subtitle1Blue {
-  font-family: Cera Pro, sans-serif;
+  font-family:  sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
@@ -135,5 +137,5 @@
   width: 250px;
   color: #22c870;
   display: block;
-  text-transform: capitalize;
+  text-transform: none;
 }

@@ -9,7 +9,7 @@ const LogOutButton = (props: Props) => {
   return (
     props.isauth && (
       <Button variant="text" onClick={props.logout}>
-        <Text variant={'body3'} text={'Log Out'}></Text>
+        <Text variant={'body1'} text={'Log Out'}></Text>
       </Button>
     )
   );

@@ -25,9 +25,12 @@ const Footer = () => {
       fontWeight: 700,
     },
     gamma: {
-      paddingTop: '48px',
-      paddingLeft: '50px',
-      color: 'pink', //'#6D787E',
+      
+      paddingTop: '50px',
+      fontFamily:'sans-serif',
+      paddingLeft: '25px',
+      color : '#6D787E',
+      fontSize:'15px',
     },
     parent: {
       display: 'flex',
@@ -48,13 +51,13 @@ const Footer = () => {
     if (variant === 'body1') {
       return (
         <div>
-          <Text variant={'body1'} text={data[0]}></Text>
+          <Text variant={'body3'} text={data[0]}></Text>
           <br />
-          <Text variant={'body3'} text={data[1]}></Text>
-          <Text variant={'body3'} text={data[2]}></Text>
-          <Text variant={'body3'} text={data[3]}></Text>
-          <Text variant={'body3'} text={data[4]}></Text>
-          <Text variant={'body3'} text={data[5]}></Text>
+          <Text variant={'body1'} text={data[1]}></Text>
+          <Text variant={'body1'} text={data[2]}></Text>
+          <Text variant={'body1'} text={data[3]}></Text>
+          <Text variant={'body1'} text={data[4]}></Text>
+          <Text variant={'body1'} text={data[5]}></Text>
         </div>
       );
     }
@@ -64,10 +67,10 @@ const Footer = () => {
     <div className={classes.parent}>
       <div className={classes.body}>
         <div className={classes.flex}>
-          <div>
+          <div style={{'paddingTop':'20px','paddingRight':'100px'}}>
             <Image
               src="../../../../logo.png"
-              height={100}
+              height={80}
               width={124.09}
             ></Image>
             {text(
@@ -122,12 +125,9 @@ const Footer = () => {
           </div>
         </div>
         <div className={classes.gamma}>
-          {text(
-            [
-              '© Blinkist 2021 Sitemap  |   Imprint   |   Terms of Service   |   Privacy Policies',
-            ],
-            'body1',
-          )}
+          
+        © Blinkist 2021 Sitemap  |   Imprint   |   Terms of Service   |   Privacy Policies
+          
         </div>
       </div>
     </div>

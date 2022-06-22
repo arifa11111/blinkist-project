@@ -89,7 +89,6 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                         key={d.id}
                         className={classes.root}
                       >
-                       
                             <BookCard
                               mode={d.startedread ? 'normal' : 'non-hover'}
                               bookName={d.cardName}
@@ -98,16 +97,20 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                               time={d.timeStamp}
                               read={d.reads}
                               status={d.isread}
-                            />
-                          
+                            />   
                       </Grid>
                     ))}
               </Grid>
+              <>
+              <div className={classes.text}>
               <Text
-                variant={'h1'}
+                variant={'caption'}
                 text={'Just added'}
-                height={'18px'}
+                height={'24px'}
               />
+              </div>
+              </>
+              
               <Grid container spacing={2}>
                 {props.book &&
                   props.book
@@ -138,11 +141,13 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                       </Grid>
                     ))}
               </Grid>
+              <div className={classes.text}>
               <Text
-                variant={'h1'}
+                variant={'caption'}
                 text={'Featured audio blinks'}
-                height={'18px'}
-              />
+                height={'24px'}
+              /></div>
+              <br />
               <Grid container spacing={2}>
                 {props.book &&
                   props.book
@@ -158,8 +163,6 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                         key={d.id}
                         className={classes.root}
                       >
-                         
-                         
                             <BookCard
                               mode={d.startedread ? 'normal' : 'non-hover'}
                               bookName={d.cardName}
@@ -190,6 +193,7 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                   .map((d: any) => (
                     <Grid
                       item
+                      onClick={() => d.startedread ? '' :clickHandler(d)}
                       xs={2}
                       sm={4}
                       md={4}

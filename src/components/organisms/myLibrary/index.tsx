@@ -28,7 +28,7 @@ const useStyles = makeStyles({
 
   line: {
     width: '304px',
-    height: '2px',
+    height: '1.7px',
   },
 
 });
@@ -49,7 +49,7 @@ type data = {
 const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
   const classes = useStyles();
   const [currently, setCurrently] = useState(true);
-  const [finished, setFinished] = useState(false);
+  const [finished, setFinish] = useState(false);
   let style2;
   if (currently) {
     style2 = {
@@ -107,7 +107,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
             variant="text"
             onClick={() => {
               setCurrently(true);
-              setFinished(false);
+              setFinish(false);
             }}
           >
             <div
@@ -134,7 +134,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
             variant="text"
             onClick={() => {
               setCurrently(false);
-              setFinished(true);
+              setFinish(true);
             }}
             style={style2}
           >
@@ -181,14 +181,12 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
               // eslint-disable-next-line array-callback-return
               props.book.map((d: any) => {
                 if (d.status) {
-                  return currently && gridFunction('normal', d);
+                  return currently && gridFunction('finished', d);
                 }
                 else if (!d.status && d.startedread) {
                   return finished && gridFunction('read again', d);
                 }
-                else  if (!d.status && d.startedBook) {
-                  return gridFunction('finished', d);
-                }
+               
               })}
           </Grid>
         </Box>

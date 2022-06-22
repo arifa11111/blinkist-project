@@ -1,3 +1,4 @@
+import Button from '@mui/material/Button';
 import { makeStyles } from '@mui/styles';
 import React from 'react';
 import Text from '../../atoms/text';
@@ -18,17 +19,21 @@ const ReadAgain = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Text
-        variant={'body1'}
-        text={'Read again'}
-        height={'16px'}
-        color="#0365F2"
-        width="283px"
-      ></Text>
-      <div className={classes.flex}>
-        <div className={classes.first}></div>
+      <Button>
+          <Text
+            variant={'subtitle3Blue'}
+            text={'Read again'}
+            height={'16px'}
+            color="#0365F2"
+            width="283px"
+          ></Text>
+      </Button>
+        <div className={classes.flex}>
+        <div className={classes.first}>
+
+        </div>
       </div>
-    </div>
+      </div>
   );
 };
 export default ReadAgain;

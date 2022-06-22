@@ -42,7 +42,7 @@ const useStyles = makeStyles({
     border: '1px  solid',
     borderColor: '#E1ECFC',
     width: '284px',
-    height: '466px',
+    height: '510px',
     borderRadius: '8px',
     marginBottom: '50px',
     borderBottom: 'none',

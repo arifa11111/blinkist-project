@@ -5,6 +5,7 @@ import LoginButton from '../../molecules/LoginButton/index';
 import LogOutButton from '../../molecules/LogOUtButton/index';
 import { useAuth0 } from '@auth0/auth0-react';
 import { makeStyles } from '@mui/styles';
+import { Dropdown } from '../../atoms/icons/index.stories';
 const useStyles = makeStyles({
   circular: {
     position: 'relative',
@@ -12,7 +13,9 @@ const useStyles = makeStyles({
     height: '40px',
     overflow: 'hidden',
     borderRadius: '50%',
+    
   },
+  
   image: {
     width: '100%',
     height: 'auto',
@@ -44,15 +47,21 @@ export default function AccountMenu() {
         user?.isAuthenticated,
       )}
       {isAuthenticated ? (
-        <div data-testid="image">
-          <div className={classes.circular} onClick={handleClick}>
+        <>
+        <div data-testid="image" style={{'paddingLeft':'400px' , 'paddingTop':'10px'}}>
+          <div className={classes.circular} onClick={handleClick} >
             <img
               className={classes.image}
               src={user?.picture}
               alt={'profile'}
             />
           </div>
-        </div>
+          </div>
+          <div style={{'paddingRight':'30px'}}>
+          <Dropdown height='14px' width='12.61px' src='https://cdn1.iconfinder.com/data/icons/arrows-vol-1-5/24/dropdown_arrow2-512.png'/>
+          </div>
+          </>
+         
       ) : (
         <LoginButton></LoginButton>
       )}

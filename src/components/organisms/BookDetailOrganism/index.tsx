@@ -5,12 +5,14 @@ import Details from '../../molecules/BookDetail';
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 import { useState } from 'react';
 import Text from '../../atoms/text';
+import '../../atoms/typography/typography.css'
 
 const useStyles = makeStyles({
   flexDiv: {
     width: '920px',
     display: 'flex',
     flexDirection: 'column',
+    
   },
   root: {
     display: 'flex',
@@ -20,7 +22,7 @@ const useStyles = makeStyles({
   buttonStyle: {
     width: '200px',
     textAlign: 'left',
-    fontFamily: 'Cera Pro, sans-serif',
+    fontFamily: ' sans-serif',
     fontStyle: 'normal',
     fontWeight: 'normal',
     fontSize: '16px',
@@ -29,12 +31,41 @@ const useStyles = makeStyles({
     marginTop: '14px',
     textTransform: 'capitalize',
   },
+
+  onbutton:{
+      width: '200px',
+      textAlign: 'left',
+      fontFamily: ' sans-serif',
+      fontStyle: 'normal',
+      fontWeight: '800',
+      fontSize: '16px',
+      lineHeight: '20px',
+      color: '#1d4f69',
+      marginTop: '14px',
+      textTransform: 'capitalize',
+  },
+
   buttonStyle2: {
     width: '200px',
+    textTransform:'capitalize',
     height: '44px',
     margin: '5px',
     borderRadius: '5px',
-    fontSize: '14px',
+    color:'#22C870',
+    fontSize: '16px',
+    '&:hover': {
+      color: 'white',
+      backgroundColor: '#22C870',
+    },
+  },
+  kindle: {
+    width: '200px',
+    height: '44px',
+    textTransform:'capitalize',
+    margin: '5px',
+    borderRadius: '5px',
+    color:'#616f77',
+    fontSize: '16px',
     '&:hover': {
       color: 'white',
       backgroundColor: '#22C870',
@@ -44,8 +75,10 @@ const useStyles = makeStyles({
  
   finishedButton: {
     width: '180px',
+    textTransform:'capitalize',
     textAlign: 'left',
     height: '44px',
+    fontSize:'16px',
     '&.MuiButton-text': { backgroundColor: '#22C870' },
   },
   text: {
@@ -101,6 +134,7 @@ const BookDetailOrganism = (props: {
     timeStamp = props.book[id].timeStamp;
   }
   const [button, setButton] = useState('synopsis');
+
   const handleFinish = () => {
     props.book[id].status = false;
     props.book[id].startedread = true;
@@ -113,6 +147,7 @@ const BookDetailOrganism = (props: {
   };
   const hrFunction = (color: string) => {
     return (
+      
       <hr
         style={{
           width: '200px',
@@ -120,12 +155,15 @@ const BookDetailOrganism = (props: {
           backgroundColor: color,
         }}
       ></hr>
+      
     );
   };
   return (
     <div className={classes.root}>
       <div className={classes.flexDiv}>
-        {src1 && (
+        
+      {src1 
+      && (
           <Details
             book={props.book}
             setData={props.setData}
@@ -150,13 +188,13 @@ const BookDetailOrganism = (props: {
               className={classes.finishedButton}
               variant="text"
               onClick={handleFinish}
-              style={{fontSize:'15px'}}
+              
             >
                 Finished Reading
               
             </Button>
             <Button
-              className={classes.buttonStyle2}
+              className={classes.kindle}
               variant="text"
               endIcon={<ArrowForwardOutlinedIcon />}
               onClick={() => navigate('/enterpreuner')}
@@ -166,7 +204,7 @@ const BookDetailOrganism = (props: {
           </div>
           <div style={{ paddingTop: '72px' }}>
             <Button
-              className={classes.buttonStyle}
+              className={button === 'synopsis' ? classes.onbutton : classes.buttonStyle}
               variant="text"
               onClick={() => {
                 setButton('synopsis');
@@ -175,7 +213,7 @@ const BookDetailOrganism = (props: {
               Synopsis
             </Button>
             <Button
-              className={classes.buttonStyle}
+              className={ button === 'who' ? classes.onbutton : classes.buttonStyle}
               variant="text"
               onClick={() => {
                 setButton('who');
@@ -184,7 +222,7 @@ const BookDetailOrganism = (props: {
               Who is it for?
             </Button>
             <Button
-              className={classes.buttonStyle}
+              className={button === 'about' ? classes.onbutton : classes.buttonStyle}
               variant="text"
               onClick={() => {
                 setButton('about');
@@ -213,7 +251,7 @@ const BookDetailOrganism = (props: {
           <div style={{ paddingBottom: '257px' }}>
             {button === 'synopsis' ? (
               <Text
-                variant={'body1'}
+                variant={'body2'}
                 text={
                   bookName +
                   '(2020) updates ' +
@@ -229,7 +267,7 @@ const BookDetailOrganism = (props: {
             )}
             {button === 'who' ? (
               <Text
-                variant={'body1'}
+                variant={'body2'}
                 text="any one who are interested in Entrepreneurship"
                 height={'16px'}
                 width="600px"
@@ -240,7 +278,7 @@ const BookDetailOrganism = (props: {
             )}
             {button === 'about' ? (
               <Text
-                variant={'body1'}
+                variant={'body2'}
                 text={authorName}
                 height={'16px'}
                 width="600px"

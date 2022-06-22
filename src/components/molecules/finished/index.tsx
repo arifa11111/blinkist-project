@@ -1,5 +1,7 @@
+import { Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Text from '../../atoms/text';
 const Finished = () => {
   const useStyles = makeStyles({
@@ -23,13 +25,15 @@ const Finished = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Text
-        variant={'body1'}
-        text={'Finished'}
-        height={'16px'}
-        color="#0365F2"
-        width="283px"
-      ></Text>
+      <Button>
+          <Text
+            variant={'subtitle3Blue'}
+            text={'Finished'}
+            height={'16px'}
+            color="#0365F2"
+            width="283px"
+          ></Text>
+      </Button>
       <div className={classes.flex}>
         <div className={classes.first}></div>
         <div className={classes.second}></div>

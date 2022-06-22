@@ -85,7 +85,7 @@ const HeaderPopUp = () => {
             color="#6D787E"
           ></Text>
         </div>
-        <br />
+        
         <hr
           style={{
             width: '80%',
