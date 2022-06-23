@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import Text from '../../atoms/text';
 const Finished = () => {
   const useStyles = makeStyles({
