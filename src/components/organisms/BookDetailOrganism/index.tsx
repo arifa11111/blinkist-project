@@ -163,7 +163,7 @@ const BookDetailOrganism = (props: {
       <div className={classes.flexDiv}>
         
       {src1 
-      && (
+      && (      
           <Details
             book={props.book}
             setData={props.setData}
@@ -172,6 +172,7 @@ const BookDetailOrganism = (props: {
             authorName={authorName}
             timeStamp={timeStamp}
           ></Details>
+  
         )}
         <div>
           <div>

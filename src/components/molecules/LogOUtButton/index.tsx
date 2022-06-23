@@ -3,7 +3,7 @@ import { Button } from '@mui/material';
 import Text from '../../atoms/text';
 type Props = {
   logout: any;
-  isauth: boolean;
+  isauth: Boolean;
 };
 const LogOutButton = (props: Props) => {
   return (
