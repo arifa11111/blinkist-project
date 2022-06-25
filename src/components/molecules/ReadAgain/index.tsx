@@ -7,21 +7,23 @@ const ReadAgain = () => {
     root: {
       width: '284px',
       textAlign: 'center',
-      paddingTop: '16px',
+      bottom:'6px',
     },
-    flex: { display: 'flex', width: '283px', paddingTop: '16px' },
+    flex: { display: 'flex', width: '282px',paddingTop:'6px'},
     first: {
       width: '100%',
       height: '15px',
-      backgroundColor: '#E1ECFC',
+      backgroundColor: '#DFE8F6',
+      borderBottomLeftRadius: '8px',
+      borderBottomRightRadius: '8px',
     },
   });
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Button>
+      <Button style={{'width':'100px'}}>
           <Text
-            variant={'subtitle3Blue'}
+            variant={'cardbtn'}
             text={'Read again'}
             height={'16px'}
             color="#0365F2"

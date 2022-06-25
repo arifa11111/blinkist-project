@@ -4,10 +4,10 @@ import Text from '../../atoms/text';
 import Image from '../../atoms/images';
 const useStyles = makeStyles({
   root: {
-    width: '800px',
+    width: '912px',
     height: '264px',
     backgroundColor: '#F1F6F4',
-    paddingLeft: '45px',
+    paddingLeft: '60px',
     paddingTop: '45px',
     marginTop: '30px',
   },
@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   parent: { 
     display: 'flex',
     justifyContent: 'center',
-    paddingRight:'30px',
+    paddingRight:'7px',
   },
 
   flexCol: {
@@ -46,7 +46,7 @@ const Banner = () => {
                 ' Everything you need to know about thriving on a shoestring budget, making your first million, and hiring right from the start.'
               }
               height={'18px'}
-              width="300px"
+              width="430px"
             ></Text>
           </div>
         </div>

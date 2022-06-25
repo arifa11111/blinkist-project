@@ -1,32 +1,17 @@
 import React, { useState } from 'react';
 import Image from '../../atoms/images';
-import SearchIcon from '@mui/icons-material/Search';
 import Text from '../../atoms/text';
-import Icons from '../../atoms/icons';
 import { makeStyles } from '@mui/styles';
 import HeaderPopUp from '../headerPopup/index';
 import { useNavigate } from 'react-router-dom';
 import AccountMenu from '../Accounts/index';
+import { Dropdown } from '../../atoms/icons/index.stories';
+import SvgIcon from '@mui/material/SvgIcon';
 
 const Header = () => {
   const [click, setClick] = useState(false);
   const navigate = useNavigate();
-  const iconup = (
-    <Icons
-      src={
-        'https://cdn1.iconfinder.com/data/icons/arrows-vol-1-5/24/dropdown_arrow2-512.png'
-      }
-      height={'13px'}
-      width={'12px'}
-    ></Icons>
-  );
-  const icondown = (
-    <Icons
-      src={'https://pic.onlinewebfonts.com/svg/img_185276.png'}
-      height={'5px'}
-      width={'10px'}
-    ></Icons>
-  );
+
   const useStyles = makeStyles({
     root: {
       display: 'flex',
@@ -50,12 +35,12 @@ const Header = () => {
     child: {
       display: 'flex',
       justifyContent: 'space-between',
-      width: '920px',
+      width: '950px',
       alignItems: 'center',
     },
     blur: {
       backgroundColor: 'rgba(157, 163, 166, 0.45);',
-      height: '100vh',
+      height: '3000px',
     },
   });
   const classes = useStyles();
@@ -66,14 +51,16 @@ const Header = () => {
         <div className={classes.root}>
           <div className={classes.child}>
             <div className={classes.innerDiv}>
-              <div onClick={() => navigate('/')} data-testid="image">
+              <div onClick={() => navigate('/')} data-testid="image"  style={{'paddingRight':'25px'}}>
                 <Image
                   height={100}
                   width={124.09}
                   src={'../../../../logo.png'}
                 ></Image>
               </div>
-              <SearchIcon></SearchIcon>
+              <div >
+                  <SvgIcon style={{width:'27px',height:'27'}}><path d="M17.4752 16.195L21.353 20.0719L20.0719 21.353L16.195 17.4752C14.7525 18.6316 12.9583 19.2606 11.1095 19.2579C6.61151 19.2579 2.961 15.6074 2.961 11.1095C2.961 6.61151 6.61151 2.961 11.1095 2.961C15.6074 2.961 19.2579 6.61151 19.2579 11.1095C19.2606 12.9583 18.6316 14.7525 17.4752 16.195ZM15.659 15.5232C16.8081 14.3416 17.4498 12.7577 17.4472 11.1095C17.4472 7.60744 14.6106 4.77177 11.1095 4.77177C7.60744 4.77177 4.77177 7.60744 4.77177 11.1095C4.77177 14.6106 7.60744 17.4472 11.1095 17.4472C12.7577 17.4498 14.3416 16.8081 15.5232 15.659L15.659 15.5232V15.5232Z" fill="#042330"/></SvgIcon>
+              </div>
               <div
                 style={{
                   display: 'flex',
@@ -86,13 +73,19 @@ const Header = () => {
                   click ? setClick(false) : setClick(true)
                 }
               >
-                <Text
-                  variant={'body1black'}
-                  text={'Explore'}
-                  height={'16px'}
-                  color="black"
-                />
-                <div>{click ? icondown : iconup}</div>
+                <>
+                  <div>
+                  <Text
+                    variant={'body1black'}
+                    text={'Explore'}
+                    height={'16px'}
+                    color="black"
+                  />
+                  </div>
+                  <div style={{transform:'translateY(3px)',paddingLeft:'4px'}}>
+                    <Dropdown height='13px' width='12.61px' src='https://cdn1.iconfinder.com/data/icons/arrows-vol-1-5/24/dropdown_arrow2-512.png'/>
+                  </div>
+                </>
               </div>
               <div
                 style={{ paddingBottom: '10px' }}

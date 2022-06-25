@@ -2,12 +2,14 @@ import { makeStyles } from '@mui/styles';
 import React from 'react';
 import Image from '../../atoms/images';
 import Text from '../../atoms/text';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+
 
 const useStyles = makeStyles({
   text: {
     display: 'flex',
     flexDirection: 'column',
-    height: '280px',
+    height: '200px',
     width: '520px',
   },
   root: {
@@ -30,7 +32,7 @@ const Details = (props: {
   return (
     <div className={classes.root}>
       <div className={classes.text}>
-        <div style={{ paddingBottom: '40px' }}>
+        <div style={{ paddingBottom: '15px' ,}}>
           <Text
             variant={'body1'}
             text={'Get the key ideas from'}
@@ -59,22 +61,33 @@ const Details = (props: {
         </div>
         <div style={{ paddingBottom: '19px' }}>
           <Text
-            variant={'body1'}
+            variant={'DBAuth'}
             text={props.authorName}
             height={'15px'}
             color="#6D787E"
             width="520px"
           ></Text>
         </div>
+        <div style={{'display':'flex','lineHeight':'18px'}}>
+        <AccessTimeIcon
+            sx={{
+              position:'relative',
+              bottom:'13px',
+              width: '20px',
+              height: '20px',
+            }}
+          />
+
         <Text
-          variant={'body1'}
+          variant={'DBTime'}
           text={props.timeStamp}
           height={'14px'}
           color="#6D787E"
         ></Text>
+        </div>
       </div>
 
-      <div style={{ paddingTop: '40px' }}>
+      <div style={{ paddingTop: '72px' ,paddingLeft:'140px'}}>
       <Image
           src={`/assets/${src3}.png`}
           height={304}

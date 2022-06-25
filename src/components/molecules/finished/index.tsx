@@ -6,28 +6,36 @@ import Text from '../../atoms/text';
 const Finished = () => {
   const useStyles = makeStyles({
     root: {
-      width: '284px',
+      width: '285px',
       textAlign: 'center',
-      paddingTop: '16px',
+      bottom:'4px'
+      
     },
-    flex: { display: 'flex', width: '283px', paddingTop: '16px' },
+    flex: { 
+      display: 'flex', width: '285px', 
+      paddingTop: '6px',
+      
+      
+   },
     first: {
-      width: '30%',
+      width: '88px',
       height: '15px',
       backgroundColor: '#E1ECFC',
+      borderBottomLeftRadius: '8px',
     },
     second: {
-      width: '70%',
+      width: '195px',
       height: '15px',
       backgroundColor: '#F1F6F4',
+      borderBottomRightRadius: '8px',
     },
   });
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Button>
+      <Button style={{'width':'100px'}}>
           <Text
-            variant={'subtitle3Blue'}
+            variant={'cardbtn'}
             text={'Finished'}
             height={'16px'}
             color="#0365F2"

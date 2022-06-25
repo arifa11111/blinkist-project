@@ -48,7 +48,7 @@ export default function AccountMenu() {
       )}
       {isAuthenticated ? (
         <>
-        <div data-testid="image" style={{'paddingLeft':'400px' , 'paddingTop':'10px'}}>
+        <div data-testid="image" style={{ 'paddingTop':'2px',transform:'translateX(220px)'}}>
           <div className={classes.circular} onClick={handleClick} >
             <img
               className={classes.image}
@@ -57,7 +57,7 @@ export default function AccountMenu() {
             />
           </div>
           </div>
-          <div style={{'paddingRight':'30px'}}>
+          <div style={{transform:'translateX(-10px)'}}>
           <Dropdown height='14px' width='12.61px' src='https://cdn1.iconfinder.com/data/icons/arrows-vol-1-5/24/dropdown_arrow2-512.png'/>
           </div>
           </>

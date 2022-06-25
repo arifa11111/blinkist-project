@@ -1,10 +1,12 @@
 import { makeStyles } from '@mui/styles';
 import BookCard from '../../molecules/bookCard/index';
 import Box from '@mui/material/Box';
-import { Button, Grid } from '@material-ui/core';
+import { Button, Grid } from '@mui/material';
 import Text from '../../atoms/text/index';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../../atoms/typography/typography.css'
+
 const useStyles = makeStyles({
   root: { width: '920px' },
 
@@ -18,7 +20,11 @@ const useStyles = makeStyles({
   },
 
   buttonStyle: {
+    backgroundColor:'transparent',
     width: '284px',
+    '&:hover':{
+      backgroundColor:'transparent',
+    }
   },
 
   text: {
@@ -27,8 +33,10 @@ const useStyles = makeStyles({
   },
 
   line: {
-    width: '304px',
-    height: '1.7px',
+    width: '305px',
+    height: '2px',
+    border:'2px',
+
   },
 
 });
@@ -110,18 +118,18 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
               setFinish(false);
             }}
           >
-            <div
-              style={{ paddingLeft: '0px', paddingRight: '120px' }}
+            <div 
+              style={{  paddingRight: '120px' }}
             >
               {currently ? (
                 <Text
-                  variant={'subtitle1Blue'}
+                  variant={'subtitle1Green'}
                   text={'Currently Reading'}
                   height={'18px'}
                 />
               ) : (
                 <Text
-                  variant={'subtitle1'}
+                  variant={'subtitle2'}
                   text={'Currently Reading'}
                   height={'18px'}
                 />
@@ -138,19 +146,23 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
             }}
             style={style2}
           >
+            <div 
+              style={{paddingRight: '160px' }}
+            >
             {finished ? (
               <Text
-                variant={'subtitle1Blue'}
+                variant={'subtitle1Green'}
                 text={'Finished '}
                 height={'18px'}
               />
             ) : (
               <Text
-                variant={'subtitle1'}
+                variant={'subtitle2'}
                 text={'Finished '}
                 height={'18px'}
               />
             )}
+            </div>
           </Button>
           <div className={classes.parent}>
             <hr
@@ -158,7 +170,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
               style={
                 currently
                   ? { backgroundColor: '#2CE080' }
-                  : { backgroundColor: '#F1F6F4' }
+                  : { backgroundColor: '#e1ecfc' }
               }
             ></hr>
             <hr
@@ -166,12 +178,12 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
               style={
                 finished
                   ? { backgroundColor: '#2CE080' }
-                  : { backgroundColor: '#F1F6F4' }
+                  : { backgroundColor: '#e1ecfc' }
               }
             ></hr>
             <hr
               className={classes.line}
-              style={{ color: '#F1F6F4' }}
+              style={{ backgroundColor: '#F1F6F4' }}
             ></hr>
           </div>
         </div>
@@ -180,13 +192,12 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
             {props.book &&
               // eslint-disable-next-line array-callback-return
               props.book.map((d: any) => {
-                if (d.status) {
+               if (d.status)  {
                   return currently && gridFunction('finished', d);
-                }
+                } 
                 else if (!d.status && d.startedread) {
                   return finished && gridFunction('read again', d);
-                }
-               
+                };
               })}
           </Grid>
         </Box>

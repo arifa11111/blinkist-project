@@ -14,7 +14,7 @@ const typographyAtomStyles = createTheme({
 
   typography: {
     h1: {
-      fontFamily: "sans-serif",
+      fontFamily: "Cera Pro",
       fontWeight: 700,
       fontStyle: "normal",
       fontSize: "36px",
@@ -22,7 +22,7 @@ const typographyAtomStyles = createTheme({
       display: "inline",
     },
     caption: {
-      fontFamily: "sans-serif",
+      fontFamily: "Cera Pro",
       fontWeight: 400,
       fontStyle: "normal",
       fontSize: "14px",
@@ -30,7 +30,7 @@ const typographyAtomStyles = createTheme({
     },
 
     body1: {
-      fontFamily: "sans-serif",
+      fontFamily: "Cera Pro",
       // fontWeight: 700,
       fontSize: "16px",
       lineHeight: "20.11px",
@@ -39,7 +39,7 @@ const typographyAtomStyles = createTheme({
       textTransform: "capitalize",
     },
     subtitle1: {
-      fontFamily: "sans-serif",
+      fontFamily: "Cera Pro",
       fontWeight: 700,
       fontStyle: "medium",
       fontSize: "18px",
@@ -52,7 +52,7 @@ const typographyAtomStyles = createTheme({
       // color: "#22C870",
     },
     subtitle2: {
-      fontFamily: "sans-serif",
+      fontFamily: "Cera Pro",
       fontWeight: 500,
       fontStyle: "medium",
       fontSize: "24px",
@@ -65,7 +65,7 @@ const typographyAtomStyles = createTheme({
       lineHeight: "32px",
     },
     body2: {
-      fontFamily: "sans-serif",
+      fontFamily: "Cera Pro",
       fontStyle: "Regular",
       fontSize: "16px",
       fontWeight: 400,
@@ -73,14 +73,12 @@ const typographyAtomStyles = createTheme({
       textTransform: "capitalize",
     },
     h2: {
-      fontFamily: "sans-serif",
+      fontFamily: "Cera Pro",
       fontWeight: 400,
       fontStyle: "normal",
       fontSize: "20px",
-      width: "378px",
-      //   height: "18px",
-
-      lineHeight: "25.14px",
+      width: "509px",
+      lineHeight: "25px",
     },
   },
 });

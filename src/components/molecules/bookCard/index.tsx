@@ -32,22 +32,29 @@ const useStyles = makeStyles({
   },
   time: {
     height: '18px',
-    marginTop: '27px',
-    paddingTop: '17px',
-    marginBottom: '0px',
+    paddingTop: '18px',
     color: '#6D787E',
     display: 'flex',
+    
   },
   root: {
     border: '1px  solid',
+    borderBottom:'none',
+    borderTop:'none',
     borderColor: '#E1ECFC',
-    width: '284px',
-    height: '510px',
-    borderRadius: '8px',
-    marginBottom: '50px',
-    borderBottom: 'none',
+    width: '281px',
+    height: '466px',
+    borderRadius: '8px', 
+    '&:hover':{
+      backgroundColor:'#f1f6f4',
+    }
   },
 
+    img:{
+      borderTopRightRadius: '8px',
+      borderTopLeftRadius: '8px',
+    
+    },
   flex: { display: 'flex' },
   first: {
     width: '30%',
@@ -92,11 +99,13 @@ const Card = (props: MyProps) => {
   }
   return (
     <div className={classes.root}>
-      <img src={props.src} alt="book_image"></img>
+      <div >
+          <img className={classes.img} src={props.src} alt="book_image"></img>
+      </div>    
       <div>
         <div className={classes.book}>
           <Text
-            variant="subtitle1"
+            variant="cardh1"
             text={props.bookName}
             height={'18px'}
             color="#03314B"
@@ -105,7 +114,7 @@ const Card = (props: MyProps) => {
         </div>
         <div className={classes.author}>
           <Text
-            variant="body1"
+            variant="cardAuth"
             text={props.authorName}
             height={'15px'}
           />
@@ -114,10 +123,12 @@ const Card = (props: MyProps) => {
           <AccessTimeIcon
             sx={{
               paddingLeft: '17.67px',
-              height: '16px',
-              width: '16px',
+              height: '16.67px',
+              width: '16.67px',
+              paddingRight:'4px',
             }}
           />
+          
           <Text
             variant="caption3"
             text={props.time}
@@ -125,8 +136,9 @@ const Card = (props: MyProps) => {
           />
           {readStatus}
         </div>
+        {bottom}
       </div>
-      {bottom}
+      
     </div>
   );
 };

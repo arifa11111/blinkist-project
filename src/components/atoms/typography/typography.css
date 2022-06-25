@@ -1,26 +1,29 @@
 .h1 {
-  font-family: sans-serif;
+  font-family: Cera Pro;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 45px;
   color: #03314b;
   display: block;
+  padding-top: 12px;
+  
 }
 
 .subtitle2 {
-  font-family: sans-serif;
+  font-family: Cera Pro;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 24px;
-  width: '501px';
-  /* color:"red"; */
-  color: #353430;
+  line-height: 23px;
+  justify-content:start;
+  color: #6d787e;
   display: block;
+  padding-top: 10px;
+  text-transform: none;
 }
 .subtitle1 {
-  font-family: sans-serif;
+  font-family: Cera Pro;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
@@ -31,7 +34,7 @@
   text-transform: capitalize;
 }
 .subtitle3 {
-  font-family: sans-serif;
+  font-family: Cera Pro;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -41,51 +44,53 @@
   text-transform: capitalize;
 }
 .subtitle3Blue {
-  font-family: sans-serif;
+  font-family: Cera Pro;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  color: #116be9;
+  font-size: 24px;
+  line-height: 32px;
+  color: #0365F2;
   padding-top: '10px';
   display: block;
-  text-transform: capitalize;
+  text-transform: none;
 }
 .body3 {
-  font-family:  sans-serif;
+  font-family:  Cera Pro;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
-  color: #1d4f69;
-  display: block;
-  margin-top: 14px;
-  text-transform: capitalize;
+  line-height: 2px;
+  color: #03314b;
+  display: block; 
+  text-transform: none;
 }
 
 .body2 {
-  font-family:  sans-serif;
+  font-family:  Cera Pro;
   font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 20px;
-  color: #1d4f69;
+  color: #03314b;
   display: block;
-  margin-top: 14px;
-  text-transform: capitalize;
+  
+  width:600px;
+  height:100px;
+  text-transform: none;
 }
 .body1 {
-  font-family:  sans-serif;
+  font-family:  Cera Pro;
   font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 30px;
   color: #6d787e;
   display: block;
   text-transform: none;
+  padding-bottom: 8px;
 }
 .caption1 {
-  font-family: sans-serif;
+  font-family: Cera Pro;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -94,7 +99,7 @@
   display: block;
 }
 .caption2 {
-  font-family: sans-serif;
+  font-family: Cera Pro;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -103,7 +108,7 @@
   display: block;
 }
 .caption3 {
-  font-family: sans-serif;
+  font-family: Cera Pro;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -112,30 +117,177 @@
   display: block;
 }
 
-.body2:hover {
-  color: white;
-}
 
 .body1black {
-  font-family:  sans-serif;
+  font-family:  Cera Pro;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  color: black;
-  display: block;
-  margin-top: 14px;
+  color: #03314b;
+  margin-top: 10px;
   text-transform: capitalize;
+  padding-left: 30px;
 }
 
-.subtitle1Blue {
-  font-family:  sans-serif;
+.subtitle1Green {
+  text-transform: none;
+  font-family:  Cera Pro;
+  padding-top: 10px;
   font-style: normal;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 23px;
+  justify-content:start;
   width: 250px;
   color: #22c870;
   display: block;
+  text-decoration: none;
+}
+.subtitle1Green:hover{
+  pointer-events: none;
+  text-decoration: none;
+}
+
+
+.h1popup {
+  font-family:  Cera Pro;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20.11px;
+  color: #116be9;
   text-transform: none;
+  padding-bottom: 8px;
+  left:17.36%;
+  right:72.01%;
+  top:7.54%;
+  bottom: 87.44%;
+}
+
+.h2popup {
+  font-family:  Cera Pro;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #6d787e;
+  text-transform: none;
+  padding-bottom: 10px;
+  transform: translateX(-40px);
+}
+
+.h22popup {
+  font-family:  Cera Pro;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #6d787e;
+  text-transform: none;
+  padding-bottom: 10px;
+  transform: translateX(-65px);
+}
+
+.h3popup {
+  font-family:  Cera Pro;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6d787e;
+  text-transform: none;
+  
+}
+
+.cardh1 {
+  font-family:  Cera Pro;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17.8px;
+  line-height: 23px;
+  color: #03314b;
+  display: block; 
+  text-transform: capitalize;
+}
+
+.DBAuth {
+  font-family:  Cera Pro;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6d787e;
+  display: block;
+  text-transform: capitalize;
+  padding-bottom: 8px;
+}
+.DBTime {
+  font-family:  Cera Pro;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6d787e;
+  display: flex;
+  text-transform: lowercase;
+  padding-left: 7px;
+  position: relative;
+  bottom:10px;
+
+  
+}
+
+.cardAuth {
+  font-family:  Cera Pro;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6d787e;
+  display: block;
+  text-transform: none;
+  padding-bottom: 8px;
+}
+
+.cardbtn {
+  font-family:  Cera Pro;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #0365f2;
+  top:3px;
+  display: block;
+  text-transform: none;
+  padding-bottom: 2px;
+  padding-top:8px ;
+  background-color: transparent;
+     
+}
+
+.cardbtn:hover{
+  pointer-events: none;
+}
+
+.caption5{
+  height:24px;
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #03314b;
+  display: block;
+  
+}
+.caption51{
+  height:24px;
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #03314b;
+  display: block;
+  
 }

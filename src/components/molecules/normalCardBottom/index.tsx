@@ -9,36 +9,39 @@ const Normal = () => {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      height: '52px',
-      width: '284px',
+      height: '4px',
+      width: '285px',
     },
-    flex: { display: 'flex' },
+    flex: { display: 'flex',paddingBottom:'15px' },
     first: {
-      width: '30%',
+      width: '88px',
       height: '15px',
       backgroundColor: '#E1ECFC',
+      borderBottomLeftRadius: '8px',
     },
     second: {
-      width: '70%',
+      width: '194px',
       height: '15px',
       backgroundColor: '#F1F6F4',
+      borderBottomRightRadius: '8px',
     },
   });
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <MoreHorizIcon
-        sx={{ paddingLeft: '247px', color: '#042330' }}
+        sx={{ paddingLeft: '247px', color: '#042330' ,
+             width:'20',
+              PaddingTop:'20px',
+            }}
       ></MoreHorizIcon>
 
       <LinearProgress
         value={30}
         sx={{
-          marginTop: '20px',
+          marginTop: '8px',
           height: '15px',
           overflow: 'unset',
-          borderRadius: '0px 0px 8px 8px',
-          width: '244px',
           position: 'relative',
           left: '20px',
           backgroundColor: '#F1F6F4',

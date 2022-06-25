@@ -19,37 +19,45 @@ const useStyles = makeStyles({
     justifyContent: 'center',
   },
 
+  tab:{
+      transform:'translateY(-40px)',
+  },
   buttonStyle: {
     width: '200px',
-    textAlign: 'left',
-    fontFamily: ' sans-serif',
-    fontStyle: 'normal',
-    fontWeight: 'normal',
-    fontSize: '16px',
-    lineHeight: '20px',
-    color: '#6d787e',
-    marginTop: '14px',
-    textTransform: 'capitalize',
+      justifyContent:'start',
+      fontFamily: ' Cera Pro',
+      fontStyle: 'normal',
+      fontWeight: '400',
+      fontSize: '16px',
+      lineHeight: '20px',
+      color: '#6d787e',
+      marginTop: '14px',
+      textTransform: 'none',
   },
 
   onbutton:{
       width: '200px',
-      textAlign: 'left',
-      fontFamily: ' sans-serif',
+      justifyContent:'start',
+      fontFamily: ' Cera Pro',
       fontStyle: 'normal',
-      fontWeight: '800',
+      fontWeight: '400',
       fontSize: '16px',
       lineHeight: '20px',
-      color: '#1d4f69',
+      color: '#03314b',
       marginTop: '14px',
-      textTransform: 'capitalize',
+      textTransform: 'none',
   },
 
   buttonStyle2: {
-    width: '200px',
-    textTransform:'capitalize',
+    width: '122px',
+    textTransform:'none',
     height: '44px',
+    bottom:'70px',
     margin: '5px',
+    marginLeft:'5px',
+    fontFamily:'Cera Pro',
+    fontWeight:'500',
+    border:'1px solid black',
     borderRadius: '5px',
     color:'#22C870',
     fontSize: '16px',
@@ -61,10 +69,16 @@ const useStyles = makeStyles({
   kindle: {
     width: '200px',
     height: '44px',
-    textTransform:'capitalize',
-    margin: '5px',
+    bottom:'70px',
+    paddingLeft:'1px',
+    textTransform:'none',
+    fontFamily: ' Cera Pro',
+    fontStyle: 'normal',
+    fontWeight: '400',
+    margin: '10px',
+    left:'20px',
     borderRadius: '5px',
-    color:'#616f77',
+    color:'#6d787e',
     fontSize: '16px',
     '&:hover': {
       color: 'white',
@@ -76,7 +90,10 @@ const useStyles = makeStyles({
   finishedButton: {
     width: '180px',
     textTransform:'capitalize',
-    textAlign: 'left',
+    fontFamily:'Cera Pro',
+    fontWeight:'500',
+    bottom:'70px',
+    left:'20px',
     height: '44px',
     fontSize:'16px',
     '&.MuiButton-text': { backgroundColor: '#22C870' },
@@ -150,8 +167,10 @@ const BookDetailOrganism = (props: {
       
       <hr
         style={{
-          width: '200px',
-          height: '2px',
+          width: '600px',
+          border:'2px',
+          height:'2px',
+          transform:'translateY(-45px)',
           backgroundColor: color,
         }}
       ></hr>
@@ -162,8 +181,9 @@ const BookDetailOrganism = (props: {
     <div className={classes.root}>
       <div className={classes.flexDiv}>
         
-      {src1 
-      && (      
+      {src1
+      &&
+      (      
           <Details
             book={props.book}
             setData={props.setData}
@@ -174,15 +194,16 @@ const BookDetailOrganism = (props: {
           ></Details>
   
         )}
+        
         <div>
-          <div>
+          <div >
             <Button
               className={classes.buttonStyle2}
               variant="outlined"
               onClick={handleRead}
               
             >
-              Read Now
+              Read now
             </Button>
 
             <Button
@@ -203,7 +224,7 @@ const BookDetailOrganism = (props: {
               Send to Kindle
             </Button>
           </div>
-          <div style={{ paddingTop: '72px' }}>
+          <div className={classes.tab}>
             <Button
               className={button === 'synopsis' ? classes.onbutton : classes.buttonStyle}
               variant="text"
@@ -249,7 +270,7 @@ const BookDetailOrganism = (props: {
               ? hrFunction('#2CE080')
               : hrFunction('#E1ECFC')}
           </div>
-          <div style={{ paddingBottom: '257px' }}>
+          <div className={classes.tab}>
             {button === 'synopsis' ? (
               <Text
                 variant={'body2'}

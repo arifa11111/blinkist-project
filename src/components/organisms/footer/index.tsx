@@ -5,19 +5,24 @@ const Footer = () => {
   const useStyles = makeStyles({
     flex: {
       display: 'flex',
-      justifyContent: 'space-around',
+      justifyContent: 'normal',
       alignContent: 'flex-start',
+      paddingLeft:'200px',
     },
     body: {
       backgroundColor: '#F1F6F4',
       height: '370px',
-      width: '950px',
-      paddingTop: '38px',
+      width: '1440px',
+      flexDirection:'column',
+      alignItems:'flex-start',
+      justifyContent:'center',
+      paddingTop:'20px',
     },
     body1: {
       color: 'solid black',
       paddingTop: '38px',
       fontWeight: 700,
+      paddingRight:'40px',
     },
     bottom: {
       color: 'solid black',
@@ -25,18 +30,27 @@ const Footer = () => {
       fontWeight: 700,
     },
     gamma: {
-      
       paddingTop: '50px',
-      fontFamily:'sans-serif',
-      paddingLeft: '25px',
+      fontFamily:'Cera Pro',
+      fontStyle:'normal',
+      fontWeight:'400',
+      paddingLeft: '225px',
       color : '#6D787E',
       fontSize:'15px',
+      lineHeight:'22px',
+      justifyContent:'space-between',
     },
     parent: {
       display: 'flex',
       justifyContent: 'center',
+      zIndex:'10',
       backgroundColor: '#F1F6F4',
-      marginTop: '50px',
+      bottom:'0px',
+      marginTop:'100px',
+      position:'sticky',
+      top:'100px',
+      transform:'translateY(110px)',
+      
     },
   });
   const text = (data: string[], variant: string) => {
@@ -67,7 +81,7 @@ const Footer = () => {
     <div className={classes.parent}>
       <div className={classes.body}>
         <div className={classes.flex}>
-          <div style={{'paddingTop':'20px','paddingRight':'100px'}}>
+          <div style={{'paddingRight':'200px','paddingLeft':'30px','bottom':'15px'}}>
             <Image
               src="../../../../logo.png"
               height={80}
@@ -78,12 +92,12 @@ const Footer = () => {
               'subtitle3Blue',
             )}
           </div>
-          <div>
+          <div >
             <div className={classes.body1}>
               {text(
                 [
                   'Editorial',
-                  'Book Lists',
+                  'Book lists',
                   'What is Nonfiction?',
                   'What to read next?',
                   'Benefits of reading',
@@ -93,22 +107,22 @@ const Footer = () => {
               )}
             </div>
           </div>
-          <div>
+          <div style={{'paddingLeft':'60px'}}> 
             <div className={classes.body1}>
               {text(
                 [
                   'Useful links',
                   'Pricing',
-                  'Blinkist Business',
+                  'Blinkist business',
                   'Gift cards',
-                  'Blinkist maganine',
+                  'Blinkist magaine',
                   'Contact & help',
                 ],
                 'body1',
               )}
             </div>
           </div>
-          <div>
+          <div style={{'paddingLeft':'10px'}}>
             <div className={classes.body1}>
               {text(
                 [
