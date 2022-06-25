@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">92% </span>
+                <span class="strong">95.65% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>23/25</span>
+                <span class='fraction'>22/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.61% </span>
+                <span class="strong">86.36% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>22/26</span>
+                <span class='fraction'>19/22</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">92% </span>
+                <span class="strong">95.65% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>23/25</span>
+                <span class='fraction'>22/23</span>
             </div>
         
             
@@ -262,7 +262,18 @@
 <a name='L197'></a><a href='#L197'>197</a>
 <a name='L198'></a><a href='#L198'>198</a>
 <a name='L199'></a><a href='#L199'>199</a>
-<a name='L200'></a><a href='#L200'>200</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -270,6 +281,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -444,11 +461,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">18x</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -464,10 +482,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { makeStyles } from '@mui/styles';
 import BookCard from '../../molecules/bookCard/index';
 import Box from '@mui/material/Box';
-import { Button, Grid } from '@material-ui/core';
+import { Button, Grid } from '@mui/material';
 import Text from '../../atoms/text/index';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../../atoms/typography/typography.css'
+&nbsp;
 const useStyles = makeStyles({
   root: { width: '920px' },
 &nbsp;
@@ -481,7 +501,11 @@ const useStyles = makeStyles({
   },
 &nbsp;
   buttonStyle: {
+    backgroundColor:'transparent',
     width: '284px',
+    '&amp;:hover':{
+      backgroundColor:'transparent',
+    }
   },
 &nbsp;
   text: {
@@ -490,8 +514,10 @@ const useStyles = makeStyles({
   },
 &nbsp;
   line: {
-    width: '304px',
+    width: '305px',
     height: '2px',
+    border:'2px',
+&nbsp;
   },
 &nbsp;
 });
@@ -512,7 +538,7 @@ type data = {
 const MyLibraryTemplate = (props: { book: data[]; setData: any }) =&gt; {
   const classes = useStyles();
   const [currently, setCurrently] = useState(true);
-  const [finished, setFinished] = useState(false);
+  const [finished, setFinish] = useState(false);
   let style2;
   if (currently) {
     style2 = {
@@ -570,21 +596,21 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) =&gt; {
             variant="text"
             onClick={() =&gt; {
               setCurrently(true);
-              setFinished(false);
+              setFinish(false);
             }}
           &gt;
-            &lt;div
-              style={{ paddingLeft: '0px', paddingRight: '120px' }}
+            &lt;div 
+              style={{  paddingRight: '120px' }}
             &gt;
               {currently ? (
                 &lt;Text
-                  variant={'subtitle1Blue'}
+                  variant={'subtitle1Green'}
                   text={'Currently Reading'}
                   height={'18px'}
                 /&gt;
               ) : (
                 &lt;Text
-                  variant={'subtitle1'}
+                  variant={'subtitle2'}
                   text={'Currently Reading'}
                   height={'18px'}
                 /&gt;
@@ -597,23 +623,27 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) =&gt; {
             variant="text"
             onClick={() =&gt; {
               setCurrently(false);
-              setFinished(true);
+              setFinish(true);
             }}
             style={style2}
           &gt;
+            &lt;div 
+              style={{paddingRight: '160px' }}
+            &gt;
             {finished ? (
               &lt;Text
-                variant={'subtitle1Blue'}
+                variant={'subtitle1Green'}
                 text={'Finished '}
                 height={'18px'}
               /&gt;
             ) : (
               &lt;Text
-                variant={'subtitle1'}
+                variant={'subtitle2'}
                 text={'Finished '}
                 height={'18px'}
               /&gt;
             )}
+            &lt;/div&gt;
           &lt;/Button&gt;
           &lt;div className={classes.parent}&gt;
             &lt;hr
@@ -621,7 +651,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) =&gt; {
               style={
                 currently
                   ? { backgroundColor: '#2CE080' }
-                  : { backgroundColor: '#F1F6F4' }
+                  : { backgroundColor: '#e1ecfc' }
               }
             &gt;&lt;/hr&gt;
             &lt;hr
@@ -629,12 +659,12 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) =&gt; {
               style={
                 finished
                   ? { backgroundColor: '#2CE080' }
-                  : { backgroundColor: '#F1F6F4' }
+                  : { backgroundColor: '#e1ecfc' }
               }
             &gt;&lt;/hr&gt;
             &lt;hr
               className={classes.line}
-              style={{ color: '#F1F6F4' }}
+              style={{ backgroundColor: '#F1F6F4' }}
             &gt;&lt;/hr&gt;
           &lt;/div&gt;
         &lt;/div&gt;
@@ -643,14 +673,11 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) =&gt; {
             {props.book &amp;&amp;
               // eslint-disable-next-line array-callback-return
               props.book.map((d: any) =&gt; {
-                if (d.status) {
-                  return currently &amp;&amp; gridFunction('normal', d);
-                }
-                else <span class="missing-if-branch" title="if path not taken" >I</span>if (!d.status &amp;&amp; d.startedread) {
+               if (d.status)  {
+                  return currently &amp;&amp; gridFunction('finished', d);
+                } 
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (!d.status &amp;&amp; d.startedread) {
 <span class="cstat-no" title="statement not covered" >                  return finished &amp;&amp; gridFunction('read again', d);</span>
-                }
-                else  <span class="missing-if-branch" title="if path not taken" >I</span>if (!d.status &amp;&amp; d.startedBook) {
-<span class="cstat-no" title="statement not covered" >                  return gridFunction('finished', d);</span>
                 }
               })}
           &lt;/Grid&gt;
@@ -667,7 +694,7 @@ export default MyLibraryTemplate;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Jun 21 2022 11:27:55 GMT+0530 (India Standard Time)
+                at Sat Jun 25 2022 18:02:10 GMT+0530 (India Standard Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>

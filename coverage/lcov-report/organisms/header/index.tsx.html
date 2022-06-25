@@ -25,14 +25,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
@@ -179,14 +179,7 @@
 <a name='L114'></a><a href='#L114'>114</a>
 <a name='L115'></a><a href='#L115'>115</a>
 <a name='L116'></a><a href='#L116'>116</a>
-<a name='L117'></a><a href='#L117'>117</a>
-<a name='L118'></a><a href='#L118'>118</a>
-<a name='L119'></a><a href='#L119'>119</a>
-<a name='L120'></a><a href='#L120'>120</a>
-<a name='L121'></a><a href='#L121'>121</a>
-<a name='L122'></a><a href='#L122'>122</a>
-<a name='L123'></a><a href='#L123'>123</a>
-<a name='L124'></a><a href='#L124'>124</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L117'></a><a href='#L117'>117</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -209,21 +202,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -271,7 +249,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -311,33 +297,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from 'react';
 import Image from '../../atoms/images';
-import SearchIcon from '@mui/icons-material/Search';
 import Text from '../../atoms/text';
-import Icons from '../../atoms/icons';
 import { makeStyles } from '@mui/styles';
 import HeaderPopUp from '../headerPopup/index';
 import { useNavigate } from 'react-router-dom';
 import AccountMenu from '../Accounts/index';
+import { Dropdown } from '../../atoms/icons/index.stories';
+import SvgIcon from '@mui/material/SvgIcon';
 &nbsp;
 const Header = () =&gt; {
   const [click, setClick] = useState(false);
   const navigate = useNavigate();
-  const iconup = (
-    &lt;Icons
-      src={
-        'https://cdn1.iconfinder.com/data/icons/arrows-vol-1-5/24/dropdown_arrow2-512.png'
-      }
-      height={'13px'}
-      width={'12px'}
-    &gt;&lt;/Icons&gt;
-  );
-  const icondown = (
-    &lt;Icons
-      src={'https://pic.onlinewebfonts.com/svg/img_185276.png'}
-      height={'5px'}
-      width={'10px'}
-    &gt;&lt;/Icons&gt;
-  );
+&nbsp;
   const useStyles = makeStyles({
     root: {
       display: 'flex',
@@ -361,12 +332,12 @@ const Header = () =&gt; {
     child: {
       display: 'flex',
       justifyContent: 'space-between',
-      width: '920px',
+      width: '950px',
       alignItems: 'center',
     },
     blur: {
       backgroundColor: 'rgba(157, 163, 166, 0.45);',
-      height: '100vh',
+      height: '3000px',
     },
   });
   const classes = useStyles();
@@ -377,14 +348,16 @@ const Header = () =&gt; {
         &lt;div className={classes.root}&gt;
           &lt;div className={classes.child}&gt;
             &lt;div className={classes.innerDiv}&gt;
-              &lt;div onClick={() =&gt; navigate('/')} data-testid="image"&gt;
+              &lt;div onClick={() =&gt; navigate('/')} data-testid="image"  style={{'paddingRight':'25px'}}&gt;
                 &lt;Image
                   height={100}
                   width={124.09}
                   src={'../../../../logo.png'}
                 &gt;&lt;/Image&gt;
               &lt;/div&gt;
-              &lt;SearchIcon&gt;&lt;/SearchIcon&gt;
+              &lt;div &gt;
+                  &lt;SvgIcon style={{width:'27px',height:'27'}}&gt;&lt;path d="M17.4752 16.195L21.353 20.0719L20.0719 21.353L16.195 17.4752C14.7525 18.6316 12.9583 19.2606 11.1095 19.2579C6.61151 19.2579 2.961 15.6074 2.961 11.1095C2.961 6.61151 6.61151 2.961 11.1095 2.961C15.6074 2.961 19.2579 6.61151 19.2579 11.1095C19.2606 12.9583 18.6316 14.7525 17.4752 16.195ZM15.659 15.5232C16.8081 14.3416 17.4498 12.7577 17.4472 11.1095C17.4472 7.60744 14.6106 4.77177 11.1095 4.77177C7.60744 4.77177 4.77177 7.60744 4.77177 11.1095C4.77177 14.6106 7.60744 17.4472 11.1095 17.4472C12.7577 17.4498 14.3416 16.8081 15.5232 15.659L15.659 15.5232V15.5232Z" fill="#042330"/&gt;&lt;/SvgIcon&gt;
+              &lt;/div&gt;
               &lt;div
                 style={{
                   display: 'flex',
@@ -397,13 +370,19 @@ const Header = () =&gt; {
                   click ? <span class="branch-0 cbranch-no" title="branch not covered" >setClick(false) </span>: setClick(true)
                 }
               &gt;
-                &lt;Text
-                  variant={'body1black'}
-                  text={'Explore'}
-                  height={'16px'}
-                  color="black"
-                /&gt;
-                &lt;div&gt;{click ? icondown : iconup}&lt;/div&gt;
+                &lt;&gt;
+                  &lt;div&gt;
+                  &lt;Text
+                    variant={'body1black'}
+                    text={'Explore'}
+                    height={'16px'}
+                    color="black"
+                  /&gt;
+                  &lt;/div&gt;
+                  &lt;div style={{transform:'translateY(3px)',paddingLeft:'4px'}}&gt;
+                    &lt;Dropdown height='13px' width='12.61px' src='https://cdn1.iconfinder.com/data/icons/arrows-vol-1-5/24/dropdown_arrow2-512.png'/&gt;
+                  &lt;/div&gt;
+                &lt;/&gt;
               &lt;/div&gt;
               &lt;div
                 style={{ paddingBottom: '10px' }}
@@ -439,7 +418,7 @@ export default Header;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Jun 21 2022 11:27:55 GMT+0530 (India Standard Time)
+                at Sat Jun 25 2022 18:02:10 GMT+0530 (India Standard Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>

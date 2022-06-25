@@ -22,6 +22,7 @@
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "axios": "^0.25.0",
+    "coverage": "^0.4.1",
     "i": "^0.3.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -36,10 +37,11 @@
     "build-static-webapp": "expo build:web",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "coverage": "npm test -- --coverage --testResultsProcessor=jest-sonar-reporter --watchAll"
   },
   "eslintConfig": {
     "extends": [

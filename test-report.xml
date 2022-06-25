@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/home/shaiA/Desktop/pro/src/components/molecules/bookCard/bookCard.test.tsx">
+    <testCase name="bookImage" duration="349"/>
+    <testCase name="bookname" duration="127"/>
+    <testCase name="authorname" duration="64"/>
+    <testCase name="timeStamp" duration="60"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/organisms/myLibrary/liborg.test.tsx">
+    <testCase name="card items" duration="506"/>
+    <testCase name="grid should be navigated to bookdetails on click" duration="246"/>
+    <testCase name="should navigate to MyLIbrary page" duration="678"/>
+    <testCase name="should navigate to  page" duration="498"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/pages/enterpreuner/enterpre.test.tsx">
+    <testCase name="bookdetial" duration="869"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/organisms/EntrepreneurOrganism/EOrg.test.tsx">
+    <testCase name="should have grid" duration="967"/>
+    <testCase name="grid should be navigated to bookdetails on click" duration="1062"/>
+    <testCase name="should have input field" duration="332"/>
+    <testCase name="change of form input" duration="412"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/organisms/header/header.test.tsx">
+    <testCase name="header" duration="319"/>
+    <testCase name="explore" duration="536"/>
+    <testCase name="myLIbrary" duration="95"/>
+    <testCase name="should have blinkistLogo" duration="48"/>
+    <testCase name="clicking blinkist logo should navigate to MyLibrary page" duration="76"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/organisms/headerPopup/popup.test.tsx">
+    <testCase name="should have Entrepreneurship button" duration="2817"/>
+    <testCase name="should navigate to MyLIbrary page" duration="2689"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/organisms/BookDetailOrganism/BookDetailOrg.test.tsx">
+    <testCase name="should have read now button" duration="811"/>
+    <testCase name="read now should navigate to myLibrary" duration="586"/>
+    <testCase name="should have finished button" duration="517"/>
+    <testCase name="Finished Reading should navigate to myLibrary" duration="584"/>
+    <testCase name="should have send to kindle button" duration="537"/>
+    <testCase name="send to kindle should navigate to myLibrary" duration="582"/>
+    <testCase name="should have synopsis button" duration="495"/>
+    <testCase name="should have who button" duration="478"/>
+    <testCase name="should have about  button" duration="644"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/molecules/banner/banner.test.tsx">
+    <testCase name="banner image" duration="105"/>
+    <testCase name="content" duration="27"/>
+    <testCase name="text" duration="27"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/pages/BookDetailPage/BookDetailPage.test.tsx">
+    <testCase name="bookdetial" duration="451"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/molecules/BookDetail/BookDetail.test.tsx">
+    <testCase name="details" duration="144"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/atoms/text/text.test.tsx">
+    <testCase name="text" duration="64"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/atoms/images/images.test.tsx">
+    <testCase name="renders images" duration="118"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/organisms/footer/footer.test.tsx">
+    <testCase name="footer" duration="168"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/atoms/icons/icons.test.tsx">
+    <testCase name="renders icons" duration="69"/>
+  </file>
+  <file path="/home/shaiA/Desktop/pro/src/components/templates/MyLibrary/library.test.tsx">
+    <testCase name="bookdetial" duration="310"/>
+  </file>
+</testExecutions>

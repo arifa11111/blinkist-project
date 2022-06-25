@@ -360,7 +360,28 @@
 <a name='L295'></a><a href='#L295'>295</a>
 <a name='L296'></a><a href='#L296'>296</a>
 <a name='L297'></a><a href='#L297'>297</a>
-<a name='L298'></a><a href='#L298'>298</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L298'></a><a href='#L298'>298</a>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a>
+<a name='L306'></a><a href='#L306'>306</a>
+<a name='L307'></a><a href='#L307'>307</a>
+<a name='L308'></a><a href='#L308'>308</a>
+<a name='L309'></a><a href='#L309'>309</a>
+<a name='L310'></a><a href='#L310'>310</a>
+<a name='L311'></a><a href='#L311'>311</a>
+<a name='L312'></a><a href='#L312'>312</a>
+<a name='L313'></a><a href='#L313'>313</a>
+<a name='L314'></a><a href='#L314'>314</a>
+<a name='L315'></a><a href='#L315'>315</a>
+<a name='L316'></a><a href='#L316'>316</a>
+<a name='L317'></a><a href='#L317'>317</a>
+<a name='L318'></a><a href='#L318'>318</a>
+<a name='L319'></a><a href='#L319'>319</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -370,6 +391,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -520,7 +558,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -678,37 +720,45 @@ const useStyles = makeStyles({
     justifyContent: 'center',
   },
 &nbsp;
+  tab:{
+      transform:'translateY(-40px)',
+  },
   buttonStyle: {
     width: '200px',
-    textAlign: 'left',
-    fontFamily: ' Cera Pro',
-    fontStyle: 'normal',
-    fontWeight: 'normal',
-    fontSize: '16px',
-    lineHeight: '20px',
-    color: '#6d787e',
-    marginTop: '14px',
-    textTransform: 'capitalize',
+      justifyContent:'start',
+      fontFamily: ' Cera Pro',
+      fontStyle: 'normal',
+      fontWeight: '400',
+      fontSize: '16px',
+      lineHeight: '20px',
+      color: '#6d787e',
+      marginTop: '14px',
+      textTransform: 'none',
   },
 &nbsp;
   onbutton:{
       width: '200px',
-      textAlign: 'left',
+      justifyContent:'start',
       fontFamily: ' Cera Pro',
       fontStyle: 'normal',
-      fontWeight: '800',
+      fontWeight: '400',
       fontSize: '16px',
       lineHeight: '20px',
-      color: '#1d4f69',
+      color: '#03314b',
       marginTop: '14px',
-      textTransform: 'capitalize',
+      textTransform: 'none',
   },
 &nbsp;
   buttonStyle2: {
-    width: '200px',
-    textTransform:'capitalize',
+    width: '122px',
+    textTransform:'none',
     height: '44px',
+    bottom:'70px',
     margin: '5px',
+    marginLeft:'5px',
+    fontFamily:'Cera Pro',
+    fontWeight:'500',
+    border:'1px solid black',
     borderRadius: '5px',
     color:'#22C870',
     fontSize: '16px',
@@ -720,10 +770,16 @@ const useStyles = makeStyles({
   kindle: {
     width: '200px',
     height: '44px',
-    textTransform:'capitalize',
-    margin: '5px',
+    bottom:'70px',
+    paddingLeft:'1px',
+    textTransform:'none',
+    fontFamily: ' Cera Pro',
+    fontStyle: 'normal',
+    fontWeight: '400',
+    margin: '10px',
+    left:'20px',
     borderRadius: '5px',
-    color:'#616f77',
+    color:'#6d787e',
     fontSize: '16px',
     '&amp;:hover': {
       color: 'white',
@@ -735,7 +791,10 @@ const useStyles = makeStyles({
   finishedButton: {
     width: '180px',
     textTransform:'capitalize',
-    textAlign: 'left',
+    fontFamily:'Cera Pro',
+    fontWeight:'500',
+    bottom:'70px',
+    left:'20px',
     height: '44px',
     fontSize:'16px',
     '&amp;.MuiButton-text': { backgroundColor: '#22C870' },
@@ -809,8 +868,10 @@ const BookDetailOrganism = (props: {
       
       &lt;hr
         style={{
-          width: '200px',
-          height: '2px',
+          width: '600px',
+          border:'2px',
+          height:'2px',
+          transform:'translateY(-45px)',
           backgroundColor: color,
         }}
       &gt;&lt;/hr&gt;
@@ -821,8 +882,9 @@ const BookDetailOrganism = (props: {
     &lt;div className={classes.root}&gt;
       &lt;div className={classes.flexDiv}&gt;
         
-      {src1 
-      &amp;&amp; (      
+      {src1
+      &amp;&amp;
+      (      
           &lt;Details
             book={props.book}
             setData={props.setData}
@@ -833,15 +895,16 @@ const BookDetailOrganism = (props: {
           &gt;&lt;/Details&gt;
   
         )}
+        
         &lt;div&gt;
-          &lt;div&gt;
+          &lt;div &gt;
             &lt;Button
               className={classes.buttonStyle2}
               variant="outlined"
               onClick={handleRead}
               
             &gt;
-              Read Now
+              Read now
             &lt;/Button&gt;
 &nbsp;
             &lt;Button
@@ -862,7 +925,7 @@ const BookDetailOrganism = (props: {
               Send to Kindle
             &lt;/Button&gt;
           &lt;/div&gt;
-          &lt;div style={{ paddingTop: '72px' }}&gt;
+          &lt;div className={classes.tab}&gt;
             &lt;Button
               className={button === 'synopsis' ? classes.onbutton : classes.buttonStyle}
               variant="text"
@@ -908,7 +971,7 @@ const BookDetailOrganism = (props: {
               ? hrFunction('#2CE080')
               : hrFunction('#E1ECFC')}
           &lt;/div&gt;
-          &lt;div style={{ paddingBottom: '257px' }}&gt;
+          &lt;div className={classes.tab}&gt;
             {button === 'synopsis' ? (
               &lt;Text
                 variant={'body2'}
@@ -961,7 +1024,7 @@ export default BookDetailOrganism;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jun 23 2022 10:32:07 GMT+0530 (India Standard Time)
+                at Sat Jun 25 2022 18:02:10 GMT+0530 (India Standard Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>

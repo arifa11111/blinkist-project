@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">86.66% </span>
+                <span class="strong">93.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/15</span>
+                <span class='fraction'>14/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">90% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/10</span>
+                <span class='fraction'>9/10</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">86.66% </span>
+                <span class="strong">93.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/15</span>
+                <span class='fraction'>14/15</span>
             </div>
         
             
@@ -196,7 +196,19 @@
 <a name='L131'></a><a href='#L131'>131</a>
 <a name='L132'></a><a href='#L132'>132</a>
 <a name='L133'></a><a href='#L133'>133</a>
-<a name='L134'></a><a href='#L134'>134</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -258,14 +270,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">42x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">42x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -289,6 +308,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">42x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -363,22 +387,29 @@ const useStyles = makeStyles({
   },
   time: {
     height: '18px',
-    marginTop: '27px',
-    paddingTop: '17px',
-    marginBottom: '0px',
+    paddingTop: '18px',
     color: '#6D787E',
     display: 'flex',
+    
   },
   root: {
     border: '1px  solid',
+    borderBottom:'none',
+    borderTop:'none',
     borderColor: '#E1ECFC',
-    width: '284px',
+    width: '281px',
     height: '466px',
-    borderRadius: '8px',
-    marginBottom: '50px',
-    borderBottom: 'none',
+    borderRadius: '8px', 
+    '&amp;:hover':{
+      backgroundColor:'#f1f6f4',
+    }
   },
 &nbsp;
+    img:{
+      borderTopRightRadius: '8px',
+      borderTopLeftRadius: '8px',
+    
+    },
   flex: { display: 'flex' },
   first: {
     width: '30%',
@@ -397,8 +428,8 @@ const Card = (props: MyProps) =&gt; {
   if (props.mode === 'normal') {
     bottom = &lt;Normal&gt;&lt;/Normal&gt;;
   }
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (props.mode === 'finished') {
-<span class="cstat-no" title="statement not covered" >    bottom = &lt;Finished&gt;&lt;/Finished&gt;;</span>
+  if (props.mode === 'finished') {
+    bottom = &lt;Finished&gt;&lt;/Finished&gt;;
   }
   <span class="missing-if-branch" title="if path not taken" >I</span>if (props.mode === 'read again') {
 <span class="cstat-no" title="statement not covered" >    bottom = &lt;ReadAgain&gt;&lt;/ReadAgain&gt;;</span>
@@ -423,11 +454,13 @@ const Card = (props: MyProps) =&gt; {
   }
   return (
     &lt;div className={classes.root}&gt;
-      &lt;img src={props.src} alt="book_image"&gt;&lt;/img&gt;
+      &lt;div &gt;
+          &lt;img className={classes.img} src={props.src} alt="book_image"&gt;&lt;/img&gt;
+      &lt;/div&gt;    
       &lt;div&gt;
         &lt;div className={classes.book}&gt;
           &lt;Text
-            variant="subtitle1"
+            variant="cardh1"
             text={props.bookName}
             height={'18px'}
             color="#03314B"
@@ -436,7 +469,7 @@ const Card = (props: MyProps) =&gt; {
         &lt;/div&gt;
         &lt;div className={classes.author}&gt;
           &lt;Text
-            variant="body1"
+            variant="cardAuth"
             text={props.authorName}
             height={'15px'}
           /&gt;
@@ -445,10 +478,12 @@ const Card = (props: MyProps) =&gt; {
           &lt;AccessTimeIcon
             sx={{
               paddingLeft: '17.67px',
-              height: '16px',
-              width: '16px',
+              height: '16.67px',
+              width: '16.67px',
+              paddingRight:'4px',
             }}
           /&gt;
+          
           &lt;Text
             variant="caption3"
             text={props.time}
@@ -456,8 +491,9 @@ const Card = (props: MyProps) =&gt; {
           /&gt;
           {readStatus}
         &lt;/div&gt;
+        {bottom}
       &lt;/div&gt;
-      {bottom}
+      
     &lt;/div&gt;
   );
 };
@@ -469,7 +505,7 @@ export default Card;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Jun 21 2022 11:27:55 GMT+0530 (India Standard Time)
+                at Sat Jun 25 2022 18:02:10 GMT+0530 (India Standard Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
