@@ -3,6 +3,7 @@ import { ComponentStory } from '@storybook/react';
 export default {
   title: 'atoms/icons',
   component: Icons,
+
 };
 
 const Template: ComponentStory<typeof Icons> = (args) => (

@@ -43,7 +43,7 @@ const useStyles = makeStyles({
     borderTop:'none',
     borderColor: '#E1ECFC',
     width: '281px',
-    height: '466px',
+    height: '463px',
     borderRadius: '8px', 
     '&:hover':{
       backgroundColor:'#f1f6f4',

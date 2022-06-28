@@ -25,7 +25,7 @@
       "status " : false,
       "startedBook": false,
       "just": false,
-      "audio": true,
+      "audio": false,
       "startedread": false
     },
    
@@ -45,9 +45,9 @@
     },
 
     {
-      "src": "assets/BringYour.png",
-      "cardName": "Bring Your Human to Work",
-      "authorName": "Erica Keswin",
+      "src": "assets/fateOfFood.png",
+      "cardName": "The Fate Of Food",
+      "authorName": "Amanda Little",
       "timeStamp": "13-minute read",
       "id": 4,
       "isread": false,
@@ -59,9 +59,9 @@
       "audio": true
     },
     {
-      "src": "assets/EmployeeTo.png",
-      "cardName": "Employee to Entrepreneur",
-      "authorName": "Steve Glaveski",
+      "src": "assets/lovingYourBusiness.png",
+      "cardName": "Loveing Your Bussiness",
+      "authorName": "Debbie King",
       "timeStamp": "15-minute read",
       "id": 5,
       "isread": false,
@@ -70,7 +70,7 @@
       "startedBook": false,
       "just": false,
       "startedread": false,
-      "audio": false
+      "audio": true
     },
    
     

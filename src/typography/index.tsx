@@ -72,14 +72,7 @@ const typographyAtomStyles = createTheme({
       color: "#6D787E",
       textTransform: "capitalize",
     },
-    h2: {
-      fontFamily: "Cera Pro",
-      fontWeight: 400,
-      fontStyle: "normal",
-      fontSize: "20px",
-      width: "509px",
-      lineHeight: "25px",
-    },
+   
   },
 });
 

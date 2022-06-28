@@ -40,7 +40,7 @@ const Header = () => {
     },
     blur: {
       backgroundColor: 'rgba(157, 163, 166, 0.45);',
-      height: '3000px',
+      height: '2770px',
     },
   });
   const classes = useStyles();

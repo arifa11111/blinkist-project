@@ -30,20 +30,22 @@ const Footer = () => {
       fontWeight: 700,
     },
     gamma: {
-      paddingTop: '50px',
+      whiteSpace:'break-spaces',
       fontFamily:'Cera Pro',
       fontStyle:'normal',
       fontWeight:'400',
       paddingLeft: '225px',
       color : '#6D787E',
-      fontSize:'15px',
+      fontSize:'14px',
       lineHeight:'22px',
-      justifyContent:'space-between',
+      width:'546px',
+      height:'22px',
+      justifyContent:'space-evenly',
     },
     parent: {
       display: 'flex',
       justifyContent: 'center',
-      zIndex:'10',
+      zIndex:'-1',
       backgroundColor: '#F1F6F4',
       bottom:'0px',
       marginTop:'100px',
@@ -75,6 +77,7 @@ const Footer = () => {
         </div>
       );
     }
+  
   };
   const classes = useStyles();
   return (
@@ -140,8 +143,8 @@ const Footer = () => {
         </div>
         <div className={classes.gamma}>
           
-        © Blinkist 2021 Sitemap  |   Imprint   |   Terms of Service   |   Privacy Policies
-          
+        © Blinkist 2021 Sitemap    |    Imprint    |    Terms of Service    |    Privacy Policies
+
         </div>
       </div>
     </div>
