@@ -34,7 +34,7 @@ const Details = (props: {
       <div className={classes.text}>
         <div style={{ paddingBottom: '15px' ,}}>
           <Text
-            variant={'body1'}
+            variant={'body11'}
             text={'Get the key ideas from'}
             height={'16px'}
             color="#03314B"
@@ -68,11 +68,11 @@ const Details = (props: {
             width="520px"
           ></Text>
         </div>
-        <div style={{'display':'flex','lineHeight':'18px'}}>
+        <div style={{'display':'flex','lineHeight':'20px'}}>
         <AccessTimeIcon
             sx={{
               position:'relative',
-              bottom:'13px',
+              bottom:'11px',
               width: '20px',
               height: '20px',
             }}
@@ -87,7 +87,7 @@ const Details = (props: {
         </div>
       </div>
 
-      <div style={{ paddingTop: '72px' ,paddingLeft:'140px'}}>
+      <div style={{ paddingTop: '72px' ,paddingLeft:'120px'}}>
       <Image
           src={`/assets/${src3}.png`}
           height={304}

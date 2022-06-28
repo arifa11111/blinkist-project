@@ -60,6 +60,7 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
   const clickHandler = (d: any) => {
     navigate('/enterpreuner/bookdetails', { state: d.id });
   };
+
   
   return (
     <div className={classes.parent}>
@@ -80,7 +81,7 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                     onChange={handleChange}
                     startAdornment={
                       <InputAdornment position="start">
-                        <SvgIcon style={{width:'30px',height:'30px',paddingRight:'12px'}}><path d="M17.4752 16.195L21.353 20.0719L20.0719 21.353L16.195 17.4752C14.7525 18.6316 12.9583 19.2606 11.1095 19.2579C6.61151 19.2579 2.961 15.6074 2.961 11.1095C2.961 6.61151 6.61151 2.961 11.1095 2.961C15.6074 2.961 19.2579 6.61151 19.2579 11.1095C19.2606 12.9583 18.6316 14.7525 17.4752 16.195ZM15.659 15.5232C16.8081 14.3416 17.4498 12.7577 17.4472 11.1095C17.4472 7.60744 14.6106 4.77177 11.1095 4.77177C7.60744 4.77177 4.77177 7.60744 4.77177 11.1095C4.77177 14.6106 7.60744 17.4472 11.1095 17.4472C12.7577 17.4498 14.3416 16.8081 15.5232 15.659L15.659 15.5232V15.5232Z" fill="#042330"/></SvgIcon>
+                        <SvgIcon style={{width:'30px',height:'30px',paddingRight:'12px',paddingBottom:'3px'}}><path d="M17.4752 16.195L21.353 20.0719L20.0719 21.353L16.195 17.4752C14.7525 18.6316 12.9583 19.2606 11.1095 19.2579C6.61151 19.2579 2.961 15.6074 2.961 11.1095C2.961 6.61151 6.61151 2.961 11.1095 2.961C15.6074 2.961 19.2579 6.61151 19.2579 11.1095C19.2606 12.9583 18.6316 14.7525 17.4752 16.195ZM15.659 15.5232C16.8081 14.3416 17.4498 12.7577 17.4472 11.1095C17.4472 7.60744 14.6106 4.77177 11.1095 4.77177C7.60744 4.77177 4.77177 7.60744 4.77177 11.1095C4.77177 14.6106 7.60744 17.4472 11.1095 17.4472C12.7577 17.4498 14.3416 16.8081 15.5232 15.659L15.659 15.5232V15.5232Z" fill="#042330"/></SvgIcon>
                       </InputAdornment>
                     }
                   />
@@ -96,14 +97,13 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
               ></Text>
             </div>
             <Box sx={{ flexGrow: 1 }}>
-              <Grid container spacing={2} >
+            <Grid container spacing={2}>
                 {props.book &&
                   props.book
-                    .filter((d: any) => !d.just && !d.audio)
+                    .filter((d: any) => d.id<=3 )
                     .map((d: any) => (
                       <Grid
-                        
-                        onClick ={() => d.startedread ? '' :clickHandler(d) }
+                        onClick={() => d.startedread ? '' :clickHandler(d)}
                         data-testid="grid"
                         item
                         xs={2}
@@ -112,6 +112,7 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                         key={d.id}
                         className={classes.root}
                       >
+                        
                             <BookCard
                               mode={d.startedread ? 'normal' : 'non-hover'}
                               bookName={d.cardName}
@@ -120,10 +121,13 @@ const EntrepreneurOrganism = (props: { book: any; setData: any }) => {
                               time={d.timeStamp}
                               read={d.reads}
                               status={d.isread}
-                            />   
+                            />
+                          
+                        
                       </Grid>
                     ))}
               </Grid>
+                
               <>
               <div className={classes.text}>
               <Text

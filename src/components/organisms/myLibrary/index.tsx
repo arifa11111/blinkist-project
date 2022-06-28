@@ -195,6 +195,7 @@ const MyLibraryTemplate = (props: { book: data[]; setData: any }) => {
                if (d.status)  {
                   return currently && gridFunction('finished', d);
                 } 
+                
                 if (!d.status && d.startedread) {
                   return finished && gridFunction('read again', d);
                 }
